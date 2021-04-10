@@ -79,7 +79,7 @@ export const updateAnUserImage = async (req, res) => {
     //console.log(req.body)
     //path.join(__dirname, "user.js")
     const path = req.file.path.replace(/\\/g, "/")
-    await User.findByIdAndUpdate(id, req.body = {ProfilePicture: "http://localhost:5000/" + path}, { new: true });
+    await User.findByIdAndUpdate(id, req.body = {ProfilePicture: "https://culturd-app.herokuapp.com/culturd_api/" + path}, { new: true });
     res.json(updateAnUser);
 }
 
