@@ -26,7 +26,8 @@ app.use(cors());
 const key = process.env.KEY;
 
 app.use(`/culturd_api/${key}`, Routes);
-app.use(`/culturd_api/${key}`, (req, res) => { 
+
+app.use('/', (req, res) => { 
 res.send("Welcome To Culturd API");
 }
 );
